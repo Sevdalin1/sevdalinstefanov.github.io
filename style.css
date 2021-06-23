@@ -1,0 +1,282 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+img,
+video {
+	width: 100%;
+	height: auto;
+}
+
+.header {
+	min-height: 100vh;
+	width: 100%;
+	background-image: url(img/visser-1.jpg);
+	background-position: 0 15%;
+	background-size: cover;
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+}
+
+nav {
+	padding: 2% 6%;
+}
+
+.nav-links ul li {
+	list-style: none;
+	display: inline-block;
+	padding: 8px 12px;
+	position: relative;
+}
+
+.nav-links ul li a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+.nav-links ul li::after{
+	content: '';
+	width: 0%;
+	height: 2px;
+	background: #fff;
+	display: block;
+	margin: auto;
+	transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+	width: 100%;
+}
+
+.text-box {
+	color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.text-box h1 {
+font-size: 62px;
+}
+
+.text-box p {
+	margin:  10px 0 40px;
+	font-size: 14px;
+	color: #fff;
+}
+
+.hero-btn {
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+	border: 1px solid #fff;
+	padding: 12px 34px;
+	font-size: 15px;
+	background: transparent;
+	transition-duration: .5s;
+	position: relative;
+	cursor: pointer;
+}
+
+.hero-btn:hover {
+	 /*background: #A38A67;*/
+	 background-color: #A38A67;
+	 color: white;
+	 text-decoration: none
+}
+
+#about {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#about .container {
+	text-align: center;
+	display: flex;
+	flex-flow: nowrap row;
+	align-items: center;
+	margin: 50px auto;
+}
+
+h1 {
+	font-size: 36px;
+	font-weight: 600;
+}
+
+p{
+	color: black;
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 22px;
+	padding: 10px;
+}
+
+.over-ons {
+	width: 60%;
+}
+
+.logo {
+	margin-left: 100px;
+	width: 30%;	
+	height: max-content;
+}
+
+.overlay {
+	position: absolute;
+	top: 0; bottom: 0;
+	left: 0; right: 0;
+	background-color: black;
+	opacity: .4;
+}
+
+.carousel-inner {
+	width: 50%;
+	margin: 0 auto;
+}
+
+#gallery {
+	margin: 5rem 0;
+	position: relative;
+}
+
+#title2 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+#projects {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#videos {
+	margin-top: 10%;
+	display: grid;
+	grid-template-rows: repeat(2, 1fr);
+	grid-gap: 10%;
+}
+
+#projects h1 {
+	text-align: center;
+}
+
+#contact {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column wrap;
+}
+
+form {
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+#social {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 60px;
+}
+
+#social a {
+	color: black;
+}
+
+input[type="submit"] {
+	margin-top: 20px;
+	background-color: black;
+	border-radius: 5px;
+	border: none;
+	color: white;
+	padding: 3px 10px;
+}
+
+#contact {
+	text-align: center;
+	margin-top: 100px;
+}
+
+#contact-wrapper {
+	display: flex;
+	flex-flow: nowrap row;
+	justify-content: center;
+}
+
+#contact-bg {
+	background: url("img/foto12.jpg") no-repeat center;
+	background-size: cover;
+	width: 50%;
+	margin-left: 2vw;
+}
+
+footer {
+	width: max-content;
+	margin: 0 auto;
+}
+
+#navbar {
+	position: absolute;
+	left: 0; right: 0; top: 0;
+	z-index: 1000000;
+}
+
+@media (max-width: 768px) {
+	.header {
+		background-position: 40%;
+	}
+
+	.text-box p {
+		font-size: 1rem;
+		line-height: 1.5rem;
+	}
+
+	#about .container {
+		flex-flow: nowrap column;
+		text-align: center;
+		justify-content: center;
+	}
+
+	.header {
+		position: relative;
+	}
+
+	.logo {
+		margin: 0 auto;
+		transform: translateX(25px);
+		margin-bottom: 40px;
+		width: 50%;
+	}
+
+	.nav-links {
+		width: 90%;
+		padding: 0;
+		margin: 0 auto;
+	}
+
+	.over-ons {
+		width: 100%;
+		text-align: center;
+	}
+
+	#contact-wrapper {
+		display: flex;
+		flex-flow: nowrap column;
+	}
+
+	#contact .container {
+		width: 80%;
+	}
+}
